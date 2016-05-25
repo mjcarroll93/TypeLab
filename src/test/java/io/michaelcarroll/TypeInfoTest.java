@@ -28,10 +28,6 @@ public class TypeInfoTest {
 
     @Test
     public void listAllMembers() {
-        Field[] i = Human.class.getDeclaredFields();
-        for (Field field : i) {
-            System.out.println(field);
-        }
         String expectedValue = "private java.lang.String io.michaelcarroll.Human.name\npublic java.lang.String io.michaelcarroll.Human.address\n";
         String actualValue = typeInfo.listAllMembers(human);
         assertEquals("The expected value is private java.lang.String io.michaelcarroll.Human.name\npublic java.lang.String io.michaelcarroll.Human.address\n",expectedValue, actualValue);
